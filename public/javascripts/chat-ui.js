@@ -83,7 +83,7 @@ var myEvent = window.attachEvent || window.addEventListener;
 var chkevent = window.attachEvent ? 'onbeforeunload' : 'beforeunload'; /// make IE7, IE8 compitable
              
 myEvent(chkevent, function(e) { // For >=IE7, Chrome, Firefox
-  var confirmationMessage = 'If you reload this page your chat session will be COMPLETELY RESET.';  // a space
+  var confirmationMessage = 'If you leave or reload this page your chat session will be COMPLETELY RESET.';  // a space
   (e || window.event).returnValue = confirmationMessage;
   return confirmationMessage;
 });
